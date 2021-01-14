@@ -18,3 +18,4 @@ dotfiles_files:
   - tmux.conf
   - vim
   - vimrc
+dotfiles_start_with_dot: false
