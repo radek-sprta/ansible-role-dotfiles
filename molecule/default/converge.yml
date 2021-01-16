@@ -19,4 +19,4 @@
         state: directory
 
   roles:
-    - role: radek_sprta.dotfiles
+    - role: ansible-role-dotfiles
