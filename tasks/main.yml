@@ -9,6 +9,7 @@
     dest: "{{ dotfiles_repo_local_destination }}"
     version: "{{ dotfiles_repo_version }}"
     accept_hostkey: "{{ dotfiles_repo_accept_hostkey }}"
+    force: "{{ dotfiles_force_clone }}"
   become: false
 
 - name: Ensure all configured dotfiles are links.
