@@ -17,6 +17,7 @@
       file:
         path: /root/.config
         state: directory
+        mode: 0755
 
   roles:
     - role: ansible-role-dotfiles
