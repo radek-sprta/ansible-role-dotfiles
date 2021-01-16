@@ -8,6 +8,15 @@
       apt: update_cache=yes cache_valid_time=600
       when: ansible_os_family == 'Debian'
 
+    - name: Install git
+      package:
+        name: git
+        state: present
+
+    - name: Create /root/.config directory
+      file:
+        path: /root/.config
+        state: directory
+
   roles:
-    - role: geerlingguy.git
-    - role: geerlingguy.dotfiles
+    - role: radek_sprta.dotfiles
