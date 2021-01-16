@@ -3,11 +3,11 @@ dependencies: []
 
 galaxy_info:
   role_name: dotfiles
-  author: geerlingguy
-  description: Dotfile installation for UNIX/Linux.
-  company: "Midwestern Mac, LLC"
-  license: "license (BSD, MIT)"
-  min_ansible_version: 2.2
+  author: Radek Sprta
+  description: Install a set of dotfiles from a given repository.
+  license: MIT
+  issue_tracker_url: https://gitlab.com/radek-sprta/ansible-role-dotfiles/-/issues
+  min_ansible_version: 2.4
   platforms:
     - name: GenericUNIX
       versions:
