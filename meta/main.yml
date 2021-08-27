@@ -3,6 +3,7 @@ dependencies: []
 
 galaxy_info:
   role_name: dotfiles
+  namespace: radek_sprta
   author: Radek Sprta
   description: Install a set of dotfiles from a given repository.
   license: MIT

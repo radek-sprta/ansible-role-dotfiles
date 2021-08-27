@@ -20,4 +20,4 @@
         mode: 0755
 
   roles:
-    - role: radek_sprta.dotfiles
+    - role: dotfiles
