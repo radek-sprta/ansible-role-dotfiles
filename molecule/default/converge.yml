@@ -20,4 +20,4 @@
         mode: 0755
 
   roles:
-    - role: ansible-role-dotfiles
+    - role: radek_sprta.dotfiles
