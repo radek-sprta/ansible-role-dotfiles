@@ -20,4 +20,4 @@
         mode: 0755
 
   roles:
-    - role: dotfiles
+    - role: ansible-role-dotfiles
