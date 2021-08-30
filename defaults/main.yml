@@ -16,6 +16,7 @@ dotfiles_files:
   - gitmessage
   - inputrc
   - selected_editor
+  - tmux
   - tmux.conf
   - vim
   - vimrc
