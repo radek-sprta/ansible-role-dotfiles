@@ -3,6 +3,9 @@
   hosts: all
   become: true
 
+  vars:
+    dotfiles_recursive: false
+
   pre_tasks:
     - name: Update apt cache.
       apt: update_cache=yes cache_valid_time=600

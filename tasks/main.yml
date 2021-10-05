@@ -10,6 +10,7 @@
     version: "{{ dotfiles_repo_version }}"
     accept_hostkey: "{{ dotfiles_repo_accept_hostkey }}"
     force: "{{ dotfiles_force_clone }}"
+    recursive: "{{ dotfiles_recursive }}"
   become: false
 
 - name: Ensure all configured dotfiles are links.

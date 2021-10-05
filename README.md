@@ -11,6 +11,12 @@ Requires `git` on the managed machine (you can easily install it with `geerlingg
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
 ```
+dotfiles_recursive: true
+```
+
+Clone recursively with submodules.
+
+```
 dotfiles_repo: "https://gitlab.com/radek-sprta/dotfiles.git"
 dotfiles_repo_version: master
 ```
