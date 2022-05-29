@@ -1,5 +1,5 @@
 ---
-image: quay.io/ansible/toolset
+image: vptech/molecule
 services:
   - docker:dind
 
