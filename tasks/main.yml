@@ -1,10 +1,10 @@
 ---
 - name: Set prefix to strip
-  set_fact:
+  ansible.builtin.set_fact:
     dotfiles_prefix: "{{ dotfiles_start_with_dot | ternary('', '.') }}"
 
 - name: Ensure dotfiles repository is cloned locally.
-  git:
+  ansible.builtin.git:
     repo: "{{ dotfiles_repo }}"
     dest: "{{ dotfiles_repo_local_destination }}"
     version: "{{ dotfiles_repo_version }}"
@@ -14,7 +14,7 @@
   become: false
 
 - name: Ensure all configured dotfiles are links.
-  command: "ls -F {{ dotfiles_home }}/{{ dotfiles_prefix }}{{ item }}"
+  ansible.builtin.command: "ls -F {{ dotfiles_home }}/{{ dotfiles_prefix }}{{ item }}"
   register: existing_dotfile_info
   failed_when: false
   check_mode: false
@@ -22,7 +22,7 @@
   with_items: "{{ dotfiles_files }}"
 
 - name: Remove existing dotfiles file if a replacement is being linked.
-  file:
+  ansible.builtin.file:
     path: "{{ dotfiles_home }}/{{ dotfiles_prefix }}{{ dotfiles_files[item.0] }}"
     state: absent
   when: "'@' not in item.1.stdout"
@@ -31,7 +31,7 @@
     label: "{{ dotfiles_files[item.0] }}"
 
 - name: Link dotfiles into home folder.
-  file:
+  ansible.builtin.file:
     src: "{{ dotfiles_repo_local_destination }}/{{ item }}"
     dest: "{{ dotfiles_home }}/{{ dotfiles_prefix }}{{ item }}"
     state: link

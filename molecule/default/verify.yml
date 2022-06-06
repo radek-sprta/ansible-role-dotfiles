@@ -19,13 +19,13 @@
 
   tasks:
     - name: Check dotfiles state
-      stat:
+      ansible.builtin.stat:
         path: "/root/.{{ item }}"
       register: dotfiles_symlinks
       with_items: "{{ dotfiles }}"
 
     - name: Assert that symlinks exist
-      assert:
+      ansible.builtin.assert:
         that:
           - "item.stat.exists"
           - "item.stat.islnk"
