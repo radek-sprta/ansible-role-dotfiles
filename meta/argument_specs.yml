@@ -1,0 +1,64 @@
+---
+arguments_specs:
+  main:
+    short_description: Main entrypoint for the role
+    options:
+      dotfiles_recursive:
+        default: true
+        description: Clone repository recursively.
+        required: false
+        type: bool
+      dotfiles_repo:
+        default: "https://gitlab.com/radek-sprta/dotfiles.git"
+        description: Repository to download dotfiles from.
+        required: false
+        type: str
+      dotfiles_repo_version:
+        default: master
+        description: Git repository reference.
+        required: false
+        type: str
+      dotfiles_repo_accept_hostkey:
+        default: false
+        description: Accept repository hostkey.
+        required: false
+        type: bool
+      dotfiles_repo_local_destination:
+        default: "~/dotfiles"
+        description: Directory to clone dotfiles to.
+        required: false
+        type: path
+      dotfiles_force_clone:
+        default: false
+        description: Clone even if the repository exists.
+        required: false
+        type: bool
+      dotfiles_home:
+        default: "~"
+        description: Path to home directory.
+        required: false
+        type: path
+      dotfiles_files:
+        default:
+          - ansible.cfg
+          - config/fish
+          - config/flake8
+          - config/yakuakerc
+          - gitconfig
+          - gitignore_global
+          - gitmessage
+          - inputrc
+          - selected_editor
+          - tmux
+          - tmux.conf
+          - vim
+          - vimrc
+        description: List to dotfiles to deploy.
+        required: false
+        type: list
+        elements: path
+      dotfiles_start_with_dot:
+        default: false
+        description: Are dotfiles stored with a dot in the repo?
+        required: false
+        type: bool
