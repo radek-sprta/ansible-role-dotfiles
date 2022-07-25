@@ -8,7 +8,7 @@ lint: |
   ansible-lint
 platforms:
   - name: instance
-    image: "rsprta/alpine-ansible:latest"
+    image: ${MOLECULE_IMAGE:-rsprta/alpine-ansible:latest}
     command: ${MOLECULE_DOCKER_COMMAND:-""}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
