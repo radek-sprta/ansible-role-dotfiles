@@ -19,6 +19,7 @@ dotfiles_files:
   - selected_editor
   - tmux
   - tmux.conf
+  - tmux-powerlinerc
   - vim
   - vimrc
 dotfiles_start_with_dot: false
