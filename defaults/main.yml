@@ -11,6 +11,7 @@ dotfiles_files:
   - ansible.cfg
   - config/fish
   - config/flake8
+  - config/nvim
   - config/yakuakerc
   - gitconfig
   - gitignore_global
