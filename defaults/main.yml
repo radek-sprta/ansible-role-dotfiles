@@ -17,6 +17,7 @@ dotfiles_files:
   - gitignore_global
   - gitmessage
   - inputrc
+  - kube/kubie.yaml
   - selected_editor
   - tmux
   - tmux.conf
