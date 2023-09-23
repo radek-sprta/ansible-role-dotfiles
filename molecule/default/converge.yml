@@ -16,11 +16,14 @@
         name: git
         state: present
 
-    - name: Create /root/.config directory
+    - name: Create testing directories
       file:
-        path: /root/.config
+        path: "{{ item }}"
         state: directory
         mode: 0755
+      with_items:
+        - /root/.config
+        - /root/.kube
 
   roles:
     - role: radek_sprta.dotfiles
