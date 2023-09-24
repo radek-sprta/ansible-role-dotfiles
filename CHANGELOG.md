@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.4.0] - 2023-09-24
+
+### Added
+
+- Add config/joshuto to defaults.
+
 ## [3.3.0] - 2023-08-23
 
 ### Added
@@ -93,3 +99,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [2.2.0]: https://gitlab.com/radek-sprta/ansible-role-dotfiles/compare/2.1.0...2.2.0
 [3.0.0]: https://gitlab.com/radek-sprta/ansible-role-dotfiles/compare/2.2.0...3.0.0
 [3.1.0]: https://gitlab.com/radek-sprta/ansible-role-dotfiles/compare/3.0.0...3.1.0
+[3.2.0]: https://gitlab.com/radek-sprta/ansible-role-dotfiles/compare/3.1.0...3.2.0
+[3.3.0]: https://gitlab.com/radek-sprta/ansible-role-dotfiles/compare/3.2.0...3.3.0
+[3.4.0]: https://gitlab.com/radek-sprta/ansible-role-dotfiles/compare/3.3.0...3.4.0
