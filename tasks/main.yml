@@ -30,6 +30,15 @@
   loop_control:
     label: "{{ dotfiles_files[item.0] }}"
 
+- name: Ensure linked parent directory exists
+  ansible.builtin.file:
+    mode: "0755"
+    path: "{{ dotfiles_home }}/{{ dotfiles_prefix }}{{ item | dirname }}"
+    state: directory
+  when: item | dirname | length > 0
+  with_items: "{{ dotfiles_files }}"
+
+
 - name: Link dotfiles into home folder.
   ansible.builtin.file:
     src: "{{ dotfiles_repo_local_destination }}/{{ item }}"

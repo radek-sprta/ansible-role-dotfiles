@@ -16,14 +16,5 @@
         name: git
         state: present
 
-    - name: Create testing directories
-      file:
-        path: "{{ item }}"
-        state: directory
-        mode: 0755
-      with_items:
-        - /root/.config
-        - /root/.kube
-
   roles:
     - role: radek_sprta.dotfiles
