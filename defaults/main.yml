@@ -12,6 +12,7 @@ dotfiles_files:
   - config/fish
   - config/flake8
   - config/joshuto
+  - config/ludusavi
   - config/nvim
   - config/yakuakerc
   - gitconfig
