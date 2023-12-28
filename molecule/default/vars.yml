@@ -1,0 +1,13 @@
+---
+dotfiles_files:
+  - ansible.cfg
+  - config/fish
+  - gitconfig
+  - gitignore_global
+  - gitmessage
+  - inputrc
+  - selected_editor
+  - tmux.conf
+  - vim
+  - vimrc
+dotfiles_recursive: false

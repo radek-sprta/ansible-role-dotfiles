@@ -2,27 +2,15 @@
 - name: Verify
   hosts: all
 
-  vars:
-    dotfiles:
-      - ansible.cfg
-      - config/fish
-      - config/flake8
-      - config/yakuakerc
-      - gitconfig
-      - gitignore_global
-      - gitmessage
-      - inputrc
-      - selected_editor
-      - tmux.conf
-      - vim
-      - vimrc
+  vars_files:
+    - vars.yml
 
   tasks:
     - name: Check dotfiles state
       ansible.builtin.stat:
         path: "/root/.{{ item }}"
       register: dotfiles_symlinks
-      with_items: "{{ dotfiles }}"
+      with_items: "{{ dotfiles_files }}"
 
     - name: Assert that symlinks exist
       ansible.builtin.assert:
