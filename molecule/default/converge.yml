@@ -3,8 +3,8 @@
   hosts: all
   become: true
 
-  vars:
-    dotfiles_recursive: false
+  vars_files:
+    - vars.yml
 
   pre_tasks:
     - name: Update apt cache.
